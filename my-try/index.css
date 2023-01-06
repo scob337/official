@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+/* *** Global Setting *** */
+:root{
+    --btn-color:#e75e8d;
+
+}
+body{
+    background-color: #1f2122;
+    font-family: 'Poppins', sans-serif;
+
+}
+*::selection{
+    background-color: var(--btn-color ) !important;
+    color: #fff;
+}
+.container{
+    background-color: #27292a ; 
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #1f2122 !important;
+    position: relative;
+    height: 100vh;
+    border-radius: 10px;
+}
+button{
+    width: 140px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: var(--btn-color);
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: .3s all ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+ul,a{
+    text-decoration: none;
+    list-style: none;
+}
+/* *** Global Setting *** */
+
+/* *** Start Header Design *** */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #1f2122;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+header .container .logo{
+    border-right: 1px solid #27292a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header .container .logo img{
+    margin-right: 30px;
+}
+header .container form{
+    width: 35%;
+    margin-right: 80px;
+}
+header .container form .input{
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 10px;
+    background-color: #27292a;
+    width: 10%;
+    margin-right: 50px;
+}
+header .container form .input > i{
+    color: #777;
+}
+header .container form input{
+    background-color: #27292a;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    width: 60%;
+}
+header .container form .input:focus{
+    border: 1px solid #fff !important;
+}
+header .container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s linear !important;
+
+
+}
+header .container ul li{
+    margin-left: 30px;
+
+}
+header .container ul li a{
+    color: #777;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    transition: .2s linear;
+    letter-spacing: 1px;
+}
+#head-bar{
+    display: none;
+}
+.active{
+    color: var(--btn-color) !important;
+}
+header .container ul li a:hover{
+    color: var(--btn-color);
+}
+header .container .profile{
+    padding:10px 0;
+    padding-left: 10px;
+    background-color: #27292a;
+    border-radius: 50px;
+    width: 130px;
+    position: relative;
+    overflow: hidden;
+    transition: .2s linear;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+header .container .profile img{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translate(0% , -50%);
+}
+header .container .profile:hover{
+    background-color: var(--btn-color);
+}
+header .container .profile:hover a{
+    color: #fff;
+}
+
+/* *** Media of head *** */
+
+@media(max-width:779px) {
+    header .container{
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 0 5px;
+        position: relative;
+    }
+    header .container ul{
+        position: absolute;
+        top: 65px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        left: 0;
+        border-radius:    10px;
+        background-color: #fff;
+        z-index: 999;
+    letter-spacing: 1px;
+    transition: all .3s linear;
+    height: 200px;
+
+    }
+    header .container ul li{
+        padding: 10px;
+        
+    }
+    header .container ul:last-child{
+        margin-bottom: 20px;
+    }
+    header .container ul .profile{
+        padding:0px 0;
+        background-color: #fff;
+        border-radius: 0px;
+        width: 200px;
+        position: relative;
+        overflow: hidden;
+        transition: .2s linear;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+    header .container ul .profile:hover{
+        background-color: #fff;
+        
+    }
+    header .container ul .profile:hover a{
+        color: var(--btn-color);
+    }
+    header .container ul .profile img{
+        display: none;
+    }
+    header .container .search{
+        display: none;
+    }
+    #head-bar{
+        display: block;
+        font-size: 24px;
+        color: var(--btn-color);
+        padding-right: 10px;
+        cursor: pointer;
+    }
+    header .container .logo{
+        border-right: none;
+    }
+}
+
+@media (min-width:780px) and (max-width:1272px){
+    header .container{
+        overflow: hidden;
+    }
+    header ul {
+    transition: all .3s linear !important;
+
+    }
+    header .container .search{
+        display: none;
+    }
+    header .container ul .profile img{
+        display: none;
+    }
+    header .container ul .profile{
+        padding:0px 0;
+        border-radius: 0px;
+        background-color: inherit;
+        position: relative;
+        transition: .2s linear;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    header .container ul .profile:hover{
+        background-color: inherit;
+        
+    }
+    header .container ul .profile:hover a{
+        color: var(--btn-color);
+    }
+    header .container .logo{
+        border-right: none;
+    }
+}
+
+
+
+/* *** Media of head *** */
+
+.hide{
+    height: 0 !important;
+    overflow: hidden !important;
+    transition: all .3s linear;
+}
+
+/* *** End Header Design *** */
+
+
+
+/* *** Start Landing Design *** */
+
+section .container{
+    
+    min-height: 100vh;
+    padding: 70px 0;
+}
+.landing .content{
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #1f2122;
+    border-radius: 20px;
+    padding: 0;
+}
+.landing .content img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.landing .content .text{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index:999 ;
+    color: #fff;
+
+}
+.landing .content .text h3{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.landing .content .text h1{
+    font-size: 48px;
+    width: 100%;
+    font-weight: 700;
+}
+.landing button{
+    width: 140px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: var(--btn-color);
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: .3s all ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+.landing button:hover{
+    color: var(--btn-color);
+    background-color: #fff;
+}
+@media (max-width:1272px){
+    .landing .content{
+        height: 100vh;
+    }
+    .landing .content img{
+        height: 70%;
+    }
+}
+/* *** End Landing Design *** */
+
+/* *** Start cards Design *** */
+
+.most-popular .container{
+    position: relative;
+    
+}
+.most-popular .container .content{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    height: fit-content;
+    color: #fff;
+
+}
+.most-popular .container .card{
+    width:230px;
+    height: 250px;
+    background-color: #27292a;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.most-popular .container .card ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.most-popular .container .card ul li{
+    margin-right: 5px;
+}
+.most-popular .container .card .card-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}  
+.most-popular .container .card .card-content span{
+    color: #777;
+}
+.most-popular .container .card .card-content .fav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.most-popular .container .card .card-content img{
+    border-radius: 10px;
+    transition: .1s linear all;
+
+}
+.most-popular .container .card img:hover{
+    transform: scale(1.1);  
+}
+.most-popular .container .title{
+    width: 100%;
+    text-align: left !important;
+    margin: 0 !important;
+    font-size: 42px;
+}
+.most-popular .container .title h1 .first{
+    text-decoration: underline;
+    margin-right: 5px;
+}
+.most-popular .container .title span.second{
+    color: var(--btn-color);
+    
+}
+@media(max-width:456px){
+    .most-popular .container .card {
+        width: 100%;
+    }
+    .most-popular .container .title{
+        font-size: 20px;
+    }   
+}
+.most-popular .container button{
+    width: 140px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: var(--btn-color);
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: .3s all ease;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.most-popular .container button:hover{
+    color: var(--btn-color);
+    background-color: #fff;
+}
+/*  *** End cards Design *** */
+
+
+
+/* *** Library Start *** */
+
+
+.library .content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
+    height: 75vh;
+}
+.library .content h1{
+    color: var(--btn-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.library .content h1 span{
+    color: #fff;
+    text-decoration: underline;
+    margin-right:5px ;
+}
+.library .content .card{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+.library .content .card h4{
+    color: #fff;
+}
+.library .content .card  span{
+    color: #777 ;
+    margin-top: 5px;
+}
+.library .content .card ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 2px solid #27292a;
+        gap: 5px;
+}
+.library .content .card ul li img{
+    border-radius: 10px;
+}
+.library .container button{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.library .container .main-border-button
+{
+    border: 1px solid #777;
+    padding: 10px;
+    border-radius: 50px;
+    width: 130px;
+    text-align: center;
+    
+}
+.library .container .main-border-button a{
+    color: #777;
+}
+
+
+
+/* *** Library Media *** */
+
+    @media (max-width:992px){
+        .library .content{
+            height: fit-content;
+        }
+        .library .content .card ul{
+            height: 300px;
+        }
+        .library .content ul li{
+            margin-right: 10px;
+            width: 40%;
+        }
+
+
+    }
+
+
+/* *** Library Media *** */
+
+
+/* *** Library End *** */
+
+/* *** Start Footer *** */
+
+footer .container {
+    width: 100%;
+    background-color: #1f2122;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 2;
+}
+footer .container p a{
+    color: #fff;
+    margin-left: 5px;
+    transition: .2s linear ;
+}
+footer .container p a:hover{
+    color: var(--btn-color);
+}
+/* *** End Footer *** */
